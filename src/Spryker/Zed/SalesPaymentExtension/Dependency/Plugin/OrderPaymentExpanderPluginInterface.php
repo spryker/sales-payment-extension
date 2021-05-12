@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\SalesPaymentExtension\Dependency\Plugin\Sales;
+namespace Spryker\Zed\SalesPaymentExtension\Dependency\Plugin;
 
 use Generated\Shared\Transfer\OrderTransfer;
 use Generated\Shared\Transfer\PaymentTransfer;
@@ -14,7 +14,7 @@ interface OrderPaymentExpanderPluginInterface
 {
     /**
      * Specification:
-     * - TODO: Add method specification.
+     * - Expands PaymentTransfer before setting it to an OrderTransfer.
      *
      * @api
      *
@@ -23,5 +23,5 @@ interface OrderPaymentExpanderPluginInterface
      *
      * @return \Generated\Shared\Transfer\PaymentTransfer
      */
-    public function expand(OrderTransfer $orderTransfer, PaymentTransfer $paymentTransfer);
+    public function expand(OrderTransfer $orderTransfer, PaymentTransfer $paymentTransfer): PaymentTransfer;
 }
